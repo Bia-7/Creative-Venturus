@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Minecraft;
+    src: url('fonte/Minecraft.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../jpgs/quarto2.jpg') no-repeat center center / cover;
+    font-family: Minecraft, sans-serif;
+    -webkit-print-color-adjust: exact;
+}
+
+.container {
+    position: relative;
+    width: 870px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: url('../jpgs/bookpage.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #0a243b;
+}
+
+.input-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex-grow: 1;
+    font-family: Minecraft, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+    font-family: Minecraft, sans-serif;
+}
+
+button#adicionarBtn {
+    background-color: #28a745;
+    width: 100%;
+
+}
+
+button#adicionarBtn:hover {
+    background-color: #218838;
+}
+
+button#imprimirBtn,
+button#limparListaBtn,
+button#exportarBtn {
+    background-color: #e8c588;
+    margin-top: 10px;
+}
+
+button#imprimirBtn:hover,
+button#limparListaBtn:hover,
+button#exportarBtn:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaf1fb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button.concluir,
+button.excluir {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+button.concluir {
+    color: #ffc107;
+}
+
+.concluir.clicked{
+
+    background-color: #00C851;
+}
+
+button.excluir {
+    color: #dc3545;
+}
+
+li:hover button.concluir,
+li:hover button.excluir,
+li.completed button.concluir,
+li.completed button.excluir {
+    display: inline;
+}
+
+.filtros {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.estatisticas {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.prioridade-alta {
+    border-left: 4px solid #ff4444;
+}
+
+.prioridade-media {
+    border-left: 4px solid #ffbb33;
+}
+
+.prioridade-baixa {
+    border-left: 4px solid #00C851;
+}
+
+.data-vencimento {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+ /* ToDoList.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-area, .filtros {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"], 
+input[type="date"], 
+select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+#listaTarefas {
+    list-style: none;
+    overflow: auto;
+    margin-bottom: 20px;
+    height: 200px;
+   
+}
+#listaTarefas::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  #listaTarefas::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* color of the tracking area */
+  }
+  
+  #listaTarefas::-webkit-scrollbar-thumb {
+    background-color: orange;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid orange
+    ;  /* creates padding around scroll thumb */
+  }
+#listaTarefas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+.prioridade-alta {
+    border-left: 4px solid #dc3545;
+}
+
+.prioridade-media {
+    border-left: 4px solid #ffc107;
+}
+
+.prioridade-baixa {
+    border-left: 4px solid #28a745;
+}
+
+.completa {
+    background-color: #e9ecef;
+    
+}
+
+.button-concluido {
+    color: #28a745 !important;
+}
+
+.estatisticas {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.excluir {
+    background-color: #dc3545;
+}
+
+@media print {
+    #listaTarefas {
+        overflow: hidden;
+        height: auto;
+        
+    }
+    .container {
+width: 850px;
+    }
+}

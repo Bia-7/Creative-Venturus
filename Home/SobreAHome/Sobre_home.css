@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Minecraft; 
+    src: url('Minecraft.ttf') format('truetype');
+}
+
+body {
+    font-family: Minecraft;
+}
+
+h1{
+    text-align: center;
+}
+.sub{
+    text-align: center;
+}
+#botao{
+    border: none;
+    font-weight: 500;
+    background-color:whitesmoke;
+    cursor: pointer;
+
+}

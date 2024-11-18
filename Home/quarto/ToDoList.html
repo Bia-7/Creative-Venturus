@@ -1,0 +1,65 @@
+<!-- ToDoList.html -->
+<!DOCTYPE html>
+<html lang="pt">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="ToDoList.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        
+        <div class="input-area">
+            <input type="text" id="tarefaInput" placeholder="Digite sua tarefa">
+            <select id="prioridade">
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+            <select id="categoria">
+                <option value="pessoal">Pessoal</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="estudos">Estudos</option>
+            </select>
+            <input type="date" id="dataVencimento">
+            <button id="adicionarBtn">Adicionar</button>
+        </div>
+
+        <div class="filtros">
+            <input type="text" id="pesquisar" placeholder="Pesquisar tarefas...">
+            <select id="filtrarPrioridade">
+                <option value="todas">Todas as Prioridades</option>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+            <select id="filtrarCategoria">
+                <option value="todas">Todas as Categorias</option>
+                <option value="pessoal">Pessoal</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="estudos">Estudos</option>
+            </select>
+        </div>
+
+        <ul id="listaTarefas"></ul>
+
+        <div class="estatisticas">
+            <p>Total de tarefas: <span id="totalTarefas">0</span></p>
+            <p>Tarefas concluídas: <span id="tarefasConcluidas">0</span></p>
+            <p>Tarefas pendentes: <span id="tarefasPendentes">0</span></p>
+        </div>
+
+        <div class="botoes-acao">
+            <button id="imprimirBtn">Imprimir Lista</button>
+            <button id="limparListaBtn">Limpar Lista</button>
+            <button id="exportarBtn">Exportar Lista</button>
+        </div>
+    
+    </div>
+
+    <script src="ToDoList.js"></script>
+</body>
+</html>
